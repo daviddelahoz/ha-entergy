@@ -1,12 +1,15 @@
 {
   "domain": "entergy_mobile",
   "name": "Entergy",
-  "codeowners": [],
+  "codeowners": [
+    "@daviddelahoz"
+  ],
   "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/daviddelahoz/ha-entergy",
   "issue_tracker": "https://github.com/daviddelahoz/ha-entergy/issues",
   "iot_class": "cloud_polling",
+  "integration_type": "service",
   "requirements": [],
   "version": "0.1.0",
   "loggers": [
