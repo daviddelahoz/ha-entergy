@@ -1,0 +1,40 @@
+{
+  "title": "Entergy",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Entergy Login",
+        "description": "Enter your Entergy credentials.",
+        "data": {
+          "username": "Username",
+          "password": "Password",
+          "language": "Language"
+        }
+      },
+      "account": {
+        "title": "Select Entergy Account",
+        "description": "Choose the account to monitor.",
+        "data": {
+          "account_id": "Account"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to Entergy.",
+      "invalid_auth": "Invalid username or password.",
+      "mfa_required": "Entergy requested an additional login step that this integration does not support yet.",
+      "no_accounts": "Login worked, but no accounts were returned.",
+      "unknown": "Unexpected error."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Entergy Options",
+        "data": {
+          "scan_interval_seconds": "Update interval in seconds"
+        }
+      }
+    }
+  }
+}

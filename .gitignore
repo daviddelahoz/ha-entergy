@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+
+# Local handoff / agent context files
+SKILL*.md
+skill*.md
+Skills*.md
+skills*.md
+*summary*.md
+*handoff*.md
+entergy_mobile_ha_handoff_summary.md
+
+# Local binary/debug artifacts
+*.zip
+*.har
+*.pcap
+*.log
+
+# Local editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
