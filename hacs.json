@@ -1,7 +1,4 @@
-﻿{
+{
   "name": "Entergy",
-  "country": "US",
-  "render_readme": true,
-  "domains": ["sensor"]
+  "country": "US"
 }
-

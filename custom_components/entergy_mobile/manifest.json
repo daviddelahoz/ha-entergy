@@ -7,12 +7,12 @@
   "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/daviddelahoz/ha-entergy",
-  "issue_tracker": "https://github.com/daviddelahoz/ha-entergy/issues",
-  "iot_class": "cloud_polling",
   "integration_type": "service",
-  "requirements": [],
-  "version": "0.1.0",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/daviddelahoz/ha-entergy/issues",
   "loggers": [
     "custom_components.entergy_mobile"
-  ]
+  ],
+  "requirements": [],
+  "version": "0.1.0"
 }
