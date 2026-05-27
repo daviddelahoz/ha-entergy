@@ -2,6 +2,13 @@
   <img src="assets/entergy-wordmark.svg" alt="Entergy" width="560">
 </p>
 
+<p align="center">
+  <a href="https://hacs.xyz/"><img src="https://img.shields.io/badge/HACS-Custom-orange.svg" alt="HACS Custom"></a>
+  <a href="https://github.com/daviddelahoz/ha-entergy/releases"><img src="https://img.shields.io/github/v/release/daviddelahoz/ha-entergy" alt="Version"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/daviddelahoz/ha-entergy" alt="License"></a>
+  <a href="https://github.com/daviddelahoz/ha-entergy"><img src="https://img.shields.io/maintenance/yes/2026.svg" alt="Maintenance"></a>
+</p>
+
 # Entergy
 
 Home Assistant custom integration for Entergy electric usage data.
