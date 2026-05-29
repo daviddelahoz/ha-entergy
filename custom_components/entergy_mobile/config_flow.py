@@ -18,9 +18,12 @@ from .api import EntergyApiClient, EntergyApiError, EntergyAuthError, EntergyMfa
 from .const import (
     CONF_ACCOUNT_ID,
     CONF_LANGUAGE,
+    CONF_SCAN_INTERVAL_SECONDS,
     DEFAULT_LANGUAGE,
     DEFAULT_SCAN_INTERVAL_SECONDS,
     DOMAIN,
+    MAX_SCAN_INTERVAL_SECONDS,
+    MIN_SCAN_INTERVAL_SECONDS,
 )
 
 _LOGGER = logging.getLogger(__name__)
@@ -203,7 +206,7 @@ class EntergyMobileConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         return self.async_create_entry(
             title=f"Entergy {account_id}",
             data=data,
-            options={"scan_interval_seconds": DEFAULT_SCAN_INTERVAL_SECONDS},
+            options={CONF_SCAN_INTERVAL_SECONDS: DEFAULT_SCAN_INTERVAL_SECONDS},
         )
 
     @staticmethod
@@ -228,12 +231,18 @@ class EntergyMobileOptionsFlow(config_entries.OptionsFlow):
             data_schema=vol.Schema(
                 {
                     vol.Optional(
-                        "scan_interval_seconds",
+                        CONF_SCAN_INTERVAL_SECONDS,
                         default=self._config_entry.options.get(
-                            "scan_interval_seconds",
+                            CONF_SCAN_INTERVAL_SECONDS,
                             DEFAULT_SCAN_INTERVAL_SECONDS,
                         ),
-                    ): vol.All(vol.Coerce(int), vol.Range(min=300, max=86400)),
+                    ): vol.All(
+                        vol.Coerce(int),
+                        vol.Range(
+                            min=MIN_SCAN_INTERVAL_SECONDS,
+                            max=MAX_SCAN_INTERVAL_SECONDS,
+                        ),
+                    ),
                 }
             ),
         )

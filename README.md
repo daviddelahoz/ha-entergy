@@ -132,7 +132,7 @@ Important behavior:
 
 ## Options
 
-The update interval can be changed from the integration options.
+The data update interval can be changed from the integration options. Use a lower value for frequent pulls when you want the usage sensors to refresh more often.
 
 Default:
 
@@ -143,7 +143,7 @@ Default:
 Allowed range:
 
 ```text
-300 to 86400 seconds
+60 to 86400 seconds
 ```
 
 ## Debug Logging

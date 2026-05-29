@@ -14,6 +14,7 @@ from .api import EntergyApiClient, EntergyApiError, EntergyAuthError, EntergyMfa
 from .const import (
     CONF_ACCOUNT_ID,
     CONF_LANGUAGE,
+    CONF_SCAN_INTERVAL_SECONDS,
     DEFAULT_LANGUAGE,
     DEFAULT_SCAN_INTERVAL_SECONDS,
     DOMAIN,
@@ -52,7 +53,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     except EntergyApiError as err:
         raise ConfigEntryNotReady(str(err)) from err
 
-    scan_interval = int(entry.options.get("scan_interval_seconds", DEFAULT_SCAN_INTERVAL_SECONDS))
+    scan_interval = int(entry.options.get(CONF_SCAN_INTERVAL_SECONDS, DEFAULT_SCAN_INTERVAL_SECONDS))
 
     coordinator = EntergyDataUpdateCoordinator(
         hass=hass,

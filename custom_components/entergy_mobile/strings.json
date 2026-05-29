@@ -31,8 +31,9 @@
     "step": {
       "init": {
         "title": "Entergy Options",
+        "description": "Control how often Entergy usage data is pulled.",
         "data": {
-          "scan_interval_seconds": "Update interval in seconds"
+          "scan_interval_seconds": "Data update interval in seconds"
         }
       }
     }
